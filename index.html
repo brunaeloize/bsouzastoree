@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="google-site-verification" content="EKX-XDSIy42Cfe1eqTY-FF1EG79E0IZ9GmQkfhtGRGQ" />
   <title>B. Souza Store Londrina</title>
-  
+
   <!-- Importando fonte Great Vibes para o título -->
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
-  
+
   <style>
     body {
       margin: 0;
@@ -25,12 +25,12 @@
       border-bottom: 3px solid #d4af37;
     }
 
-    /* Logo no header */
-    header img {
-      max-width: 250px;
-      height: auto;
-      display: block;
-      margin: 0 auto;
+    header h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 4rem;
+      margin-bottom: 0;
+      letter-spacing: 2px;
+      font-weight: normal;
     }
 
     .descricao {
@@ -55,6 +55,7 @@
     }
 
     .produto {
+      position: relative;
       background-color: #fff;
       border-radius: 14px;
       box-shadow: 0 6px 18px rgba(212, 175, 55, 0.2);
@@ -89,6 +90,20 @@
       color: #4b3b2a;
     }
 
+    .promocao {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: linear-gradient(90deg, #d4af37, #fceabb);
+      color: #4b3b2a;
+      font-weight: bold;
+      padding: 8px 16px;
+      border-top-left-radius: 14px;
+      border-bottom-right-radius: 14px;
+      font-size: 0.9rem;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+    }
+
     .whatsapp {
       display: block;
       width: fit-content;
@@ -119,10 +134,7 @@
 <body>
 
   <header>
-    <img 
-      src="https://i.ibb.co/nsbCs23T/ei-1749542967381-removebg-preview.png" 
-      alt="B. Souza Store Londrina" 
-    />
+    <h1>B. Souza Store Londrina</h1>
   </header>
 
   <div class="descricao">
@@ -141,15 +153,24 @@
       <h2>Hidratante Lyra</h2>
       <p>R$ 39,90</p>
     </div>
+
     <div class="produto">
       <img src="https://i.ibb.co/4wQt2bh3/IMENSI-ALIVE-LOC-HID-CPO-200ml-E94096.jpg" alt="Hidratante Imensi Alive">
       <h2>Hidratante Imensi Alive</h2>
       <p>R$ 39,90</p>
     </div>
+
     <div class="produto">
       <img src="https://i.ibb.co/5gmhQMwn/3cb047fa-b549-4289-a2e3-3a93eec62803-e84667-estj-club-6-voyage-nam-25-1.jpg" alt="Kit Presente Club 6 Voyage">
       <h2>Kit Presente Club 6 Voyage</h2>
       <p>R$ 144,90</p>
+    </div>
+
+    <div class="produto">
+      <div class="promocao">🌟 PROMOÇÃO EXCLUSIVA</div>
+      <img src="https://i.ibb.co/gMkgq7TF/E2022111615-Imensi-Col-Loc-Hid-3.jpg" alt="Combo Imensi Alive">
+      <h2>Combo Imensi Alive</h2>
+      <p>R$ 169,90</p>
     </div>
   </section>
 
