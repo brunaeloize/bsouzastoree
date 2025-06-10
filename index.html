@@ -58,10 +58,11 @@
 
     .produto img {
       width: 100%;
-      max-height: 220px;
-      object-fit: cover;
+      /* Removi o max-height para evitar corte */
+      object-fit: contain; /* Ajusta para mostrar a imagem inteira */
       border-radius: 12px;
       margin-bottom: 15px;
+      background-color: #fff; /* Para garantir fundo branco ao redor da imagem */
     }
 
     .produto h2 {
@@ -112,12 +113,12 @@
 
   <section class="catalogo">
     <div class="produto">
-      <img src="https://i.ibb.co/CKy1gN2j/92730-a-1000x1000-1.jpg" alt="Hidratante Lyra">
+      <img src="https://i.ibb.co/CKy1gN2j/92730-a-1000x1000-1.jpg" alt="Hidratante Lyra" border="0">
       <h2>Hidratante Lyra</h2>
       <p>R$ 39,90</p>
     </div>
     <div class="produto">
-      <img src="https://i.ibb.co/4wQt2bh3/IMENSI-ALIVE-LOC-HID-CPO-200ml-E94096.jpg" alt="Hidratante Imensi Alive">
+      <img src="https://i.ibb.co/4wQt2bh3/IMENSI-ALIVE-LOC-HID-CPO-200ml-E94096.jpg" alt="Hidratante Imensi Alive" border="0">
       <h2>Hidratante Imensi Alive</h2>
       <p>R$ 39,90</p>
     </div>
