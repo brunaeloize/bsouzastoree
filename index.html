@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Verificação Google Search Console -->
   <meta name="google-site-verification" content="EKX-XDSIy42Cfe1eqTY-FF1EG79E0IZ9GmQkfhtGRGQ" />
   <title>B. Souza Store Londrina</title>
   <style>
@@ -15,11 +14,13 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      font-family: 'Segoe UI', sans-serif;
     }
     .img-container {
       position: relative;
       width: 100%;
       max-width: 430px;
+      text-align: center;
     }
     .main-img {
       width: 100%;
@@ -28,26 +29,26 @@
       box-shadow: 0 8px 32px #0001;
     }
     .whatsapp-link {
-      position: absolute;
-      left: 50%;
-      top: 32.5%; /* Ajuste fino para alinhar ao botão da imagem */
-      transform: translate(-50%, -50%);
-      width: 180px; /* Ajuste conforme o tamanho do botão na imagem */
-      height: 44px;
-      z-index: 2;
-      background: transparent;
-      border: none;
-      cursor: pointer;
-      text-indent: -9999px; /* Esconde o texto do link */
+      margin-top: 20px;
+      display: inline-block;
+      background-color: #e0b7a4; /* tom rosé sofisticado */
+      color: #4b2e2e;
+      padding: 12px 26px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: bold;
+      box-shadow: 0 4px 12px #00000020;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+    .whatsapp-link:hover {
+      background-color: #d9a891;
+      transform: scale(1.03);
     }
     @media (max-width: 500px) {
-      .img-container {
-        max-width: 98vw;
-      }
       .whatsapp-link {
-        width: 120px;
-        height: 32px;
-        top: 32.5%;
+        padding: 10px 22px;
+        font-size: 14px;
       }
     }
   </style>
@@ -55,7 +56,9 @@
 <body>
   <div class="img-container">
     <img class="main-img" src="https://pplx-res.cloudinary.com/image/upload/v1749634722/user_uploads/75125752/d7ebe0d8-186a-4503-9380-51d6a92600cb/1000407067.jpg" alt="B. Souza Store - Página Inicial">
-    <a class="whatsapp-link" href="https://wa.me/5543984369699" target="_blank" title="Fale conosco no WhatsApp">WHATSAPP</a>
+    <a class="whatsapp-link" href="https://wa.me/5543984369699" target="_blank" title="Fale conosco no WhatsApp">
+      Fale no WhatsApp 💬
+    </a>
   </div>
 </body>
 </html>
