@@ -33,21 +33,19 @@
       letter-spacing: 2px;
     }
 
+    /* Ícone Instagram no topo direito */
     .instagram-icon {
       position: absolute;
-      top: 25px;
-      right: 25px;
+      top: 20px;
+      right: 20px;
+      width: 32px;
+      height: 32px;
+      cursor: pointer;
+      transition: opacity 0.3s ease;
     }
 
-    .instagram-icon img {
-      width: 36px;
-      height: 36px;
-      border-radius: 8px;
-      transition: transform 0.3s ease;
-    }
-
-    .instagram-icon img:hover {
-      transform: scale(1.1);
+    .instagram-icon:hover {
+      opacity: 0.7;
     }
 
     .descricao {
@@ -138,7 +136,7 @@
 
     .whatsapp-fixo {
       position: fixed;
-      bottom: 20px;
+      bottom: 80px; /* Espaço para não tampar rodapé */
       right: 20px;
       background: #25D366;
       color: white;
@@ -162,16 +160,20 @@
       color: #7b6a58;
       font-size: 0.9rem;
       margin-top: 40px;
+      position: relative;
+      z-index: 1; /* garante que rodapé fique acima de elementos fixos */
     }
   </style>
 </head>
 <body>
 
   <header>
-    <a class="instagram-icon" href="https://www.instagram.com/bsouza_storee?igsh=MWdybmc5anU2d2Zkeg==" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
-    </a>
     <h1>B. Souza Store Londrina</h1>
+    <a href="https://www.instagram.com/bsouza_storee" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="instagram-icon" title="Instagram">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#a67c52" width="32" height="32" aria-hidden="true">
+        <path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zm8.25 3a1 1 0 110 2 1 1 0 010-2zm-4.25 1a4.75 4.75 0 110 9.5 4.75 4.75 0 010-9.5zm0 1.5a3.25 3.25 0 100 6.5 3.25 3.25 0 000-6.5z"/>
+      </svg>
+    </a>
   </header>
 
   <div class="descricao">
@@ -183,6 +185,7 @@
   </div>
 
   <section class="catalogo">
+    <!-- Produtos aqui -->
     <div class="produto">
       <img src="https://i.ibb.co/CKy1gN2j/92730-a-1000x1000-1.jpg" alt="Hidratante Lyra">
       <h2>Hidratante Lyra</h2>
@@ -205,7 +208,7 @@
     Catálogo completo em breve. Mas se quiser garantir seu produto agora, <a href="https://wa.me/5543984369699" target="_blank">clique aqui</a> 💬
   </div>
 
-  <a class="whatsapp-fixo" href="https://wa.me/5543984369699" target="_blank">
+  <a class="whatsapp-fixo" href="https://wa.me/5543984369699" target="_blank" aria-label="Fale comigo no WhatsApp">
     💬 Fale comigo no WhatsApp
   </a>
 
