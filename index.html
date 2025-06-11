@@ -10,13 +10,81 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
 
   <style>
-    body {
+    html, body {
+      height: 100%;
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #f9ecdf;
+      color: #7c5a3a;
       font-family: 'Lato', sans-serif;
-      background-color: #fefaf7;
-      color: #3e2f22;
+      min-height: 100vh;
     }
 
+    /* Tela de entrada */
+    .entrada-bg {
+      min-height: 100vh;
+      background-color: #f9ecdf;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .entrada-container {
+      text-align: center;
+      margin-top: -60px;
+    }
+    .entrada-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.2rem;
+      color: #7c5a3a;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.7em;
+      font-weight: 500;
+    }
+    .entrada-subtitle {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      letter-spacing: 0.35em;
+      color: #7c5a3a;
+      margin-bottom: 2em;
+      font-weight: 400;
+    }
+    .entrada-desc {
+      font-size: 1.15rem;
+      color: #7c5a3a;
+      margin-bottom: 2.6em;
+      font-family: 'Lato', sans-serif;
+      letter-spacing: 0.01em;
+    }
+    .entrada-whatsapp-btn {
+      display: inline-block;
+      padding: 0.8em 3.2em;
+      border: 1.5px solid #7c5a3a;
+      background: transparent;
+      color: #7c5a3a;
+      font-size: 1.14rem;
+      letter-spacing: 0.18em;
+      font-family: 'Lato', sans-serif;
+      border-radius: 4px;
+      transition: background 0.2s, color 0.2s;
+      text-decoration: none;
+      margin-bottom: 50px;
+      box-sizing: border-box;
+    }
+    .entrada-whatsapp-btn:hover {
+      background: #7c5a3a;
+      color: #f9ecdf;
+    }
+
+    /* Esconde o conteúdo principal por padrão */
+    .main-content {
+      display: none;
+    }
+
+    /* Conteúdo principal do site */
     header {
       background: linear-gradient(135deg, #f5e7e0, #fff0f5);
       text-align: center;
@@ -27,10 +95,11 @@
 
     header h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 3.8rem;
+      font-size: 3.2rem;
       margin: 0;
       color: #a67c52;
       letter-spacing: 2px;
+      font-weight: 500;
     }
 
     /* Ícone Instagram no topo direito */
@@ -58,6 +127,7 @@
       box-shadow: 0 4px 20px rgba(0,0,0,0.06);
       font-size: 1.1rem;
       line-height: 1.7;
+      color: #3e2f22;
     }
 
     .catalogo {
@@ -126,6 +196,7 @@
       text-align: center;
       font-size: 1.1rem;
       font-style: italic;
+      color: #3e2f22;
     }
 
     .aviso a {
@@ -161,61 +232,110 @@
       font-size: 0.9rem;
       margin-top: 40px;
       position: relative;
-      z-index: 1; /* garante que rodapé fique acima de elementos fixos */
+      z-index: 1;
+    }
+
+    /* Responsivo */
+    @media (max-width: 600px) {
+      .entrada-title {
+        font-size: 2rem;
+      }
+      .entrada-subtitle {
+        font-size: 1.1rem;
+      }
+      .entrada-whatsapp-btn {
+        font-size: 1rem;
+        padding: 0.7em 1.6em;
+      }
+      header h1 {
+        font-size: 2rem;
+      }
     }
   </style>
 </head>
 <body>
+  <!-- Tela de entrada -->
+  <div class="entrada-bg" id="entrada">
+    <div class="entrada-container">
+      <div class="entrada-title">B. SOUZA STORE</div>
+      <div class="entrada-subtitle">LONDRINA</div>
+      <div class="entrada-desc">Revendedora O Boticário | Eudora | Natura</div>
+      <a class="entrada-whatsapp-btn" href="https://wa.me/5543984369699" target="_blank">WHATSAPP</a>
+    </div>
+  </div>
 
-  <header>
-    <h1>B. Souza Store Londrina</h1>
-    <a href="https://www.instagram.com/bsouza_storee" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="instagram-icon" title="Instagram">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#a67c52" width="32" height="32" aria-hidden="true">
-        <path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zm8.25 3a1 1 0 110 2 1 1 0 010-2zm-4.25 1a4.75 4.75 0 110 9.5 4.75 4.75 0 010-9.5zm0 1.5a3.25 3.25 0 100 6.5 3.25 3.25 0 000-6.5z"/>
-      </svg>
+  <!-- Conteúdo principal do site (oculto até clicar no botão WhatsApp ou após transição) -->
+  <div class="main-content" id="main-content">
+    <header>
+      <h1>B. Souza Store Londrina</h1>
+      <a href="https://www.instagram.com/bsouza_storee" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="instagram-icon" title="Instagram">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#a67c52" width="32" height="32" aria-hidden="true">
+          <path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zm8.25 3a1 1 0 110 2 1 1 0 010-2zm-4.25 1a4.75 4.75 0 110 9.5 4.75 4.75 0 010-9.5zm0 1.5a3.25 3.25 0 100 6.5 3.25 3.25 0 000-6.5z"/>
+        </svg>
+      </a>
+    </header>
+
+    <div class="descricao">
+      <strong>Revendedora oficial O Boticário, Eudora e Natura.</strong><br />
+      Perfumes, hidratantes, sabonetes, shower gels, shampoos, kits e presentes. Tudo com <strong>descontos especiais</strong> e atendimento VIP.<br /><br />
+      • Produtos 100% originais<br />
+      • Parcelamento sem juros<br />
+      • Pix ou cartão<br />
+    </div>
+
+    <section class="catalogo">
+      <!-- Produtos aqui -->
+      <div class="produto">
+        <img src="https://i.ibb.co/CKy1gN2j/92730-a-1000x1000-1.jpg" alt="Hidratante Lyra">
+        <h2>Hidratante Lyra</h2>
+        <p>R$ 39,90</p>
+      </div>
+      <div class="produto">
+        <img src="https://i.ibb.co/4wQt2bh3/IMENSI-ALIVE-LOC-HID-CPO-200ml-E94096.jpg" alt="Imensi Alive">
+        <h2>Hidratante Imensi Alive</h2>
+        <p>R$ 39,90</p>
+      </div>
+      <div class="produto">
+        <div class="promocao">🌟 PROMOÇÃO</div>
+        <img src="https://i.ibb.co/DfQjfnwj/IMG-20250610-225959.png" alt="Kit Vaquinha">
+        <h2>Kit Deleite "Vaquinha"</h2>
+        <p>R$ 156,90</p>
+      </div>
+    </section>
+
+    <div class="aviso">
+      Catálogo completo em breve. Mas se quiser garantir seu produto agora, <a href="https://wa.me/5543984369699" target="_blank">clique aqui</a> 💬
+    </div>
+
+    <a class="whatsapp-fixo" href="https://wa.me/5543984369699" target="_blank" aria-label="Fale comigo no WhatsApp">
+      💬 Fale comigo no WhatsApp
     </a>
-  </header>
 
-  <div class="descricao">
-    <strong>Revendedora oficial O Boticário, Eudora e Natura.</strong><br />
-    Perfumes, hidratantes, sabonetes, shower gels, shampoos, kits e presentes. Tudo com <strong>descontos especiais</strong> e atendimento VIP.<br /><br />
-    • Produtos 100% originais<br />
-    • Parcelamento sem juros<br />
-    • Pix ou cartão<br />
+    <footer>
+      &copy; 2025 B. Souza Store Londrina<br />
+      Rua Castanheiras, 670 - Jd Leonor - Londrina/PR
+    </footer>
   </div>
 
-  <section class="catalogo">
-    <!-- Produtos aqui -->
-    <div class="produto">
-      <img src="https://i.ibb.co/CKy1gN2j/92730-a-1000x1000-1.jpg" alt="Hidratante Lyra">
-      <h2>Hidratante Lyra</h2>
-      <p>R$ 39,90</p>
-    </div>
-    <div class="produto">
-      <img src="https://i.ibb.co/4wQt2bh3/IMENSI-ALIVE-LOC-HID-CPO-200ml-E94096.jpg" alt="Imensi Alive">
-      <h2>Hidratante Imensi Alive</h2>
-      <p>R$ 39,90</p>
-    </div>
-    <div class="produto">
-      <div class="promocao">🌟 PROMOÇÃO</div>
-      <img src="https://i.ibb.co/DfQjfnwj/IMG-20250610-225959.png" alt="Kit Vaquinha">
-      <h2>Kit Deleite "Vaquinha"</h2>
-      <p>R$ 156,90</p>
-    </div>
-  </section>
+  <script>
+    // Ao clicar no botão WhatsApp da entrada, mostra o conteúdo principal
+    document.querySelector('.entrada-whatsapp-btn').addEventListener('click', function(e) {
+      // Se for para abrir o WhatsApp em nova aba, não faz nada.
+      // Para transição para o site, descomente as linhas abaixo e remova 'target="_blank"' do botão.
+      /*
+      e.preventDefault();
+      document.getElementById('entrada').style.display = 'none';
+      document.getElementById('main-content').style.display = 'block';
+      */
+    });
 
-  <div class="aviso">
-    Catálogo completo em breve. Mas se quiser garantir seu produto agora, <a href="https://wa.me/5543984369699" target="_blank">clique aqui</a> 💬
-  </div>
-
-  <a class="whatsapp-fixo" href="https://wa.me/5543984369699" target="_blank" aria-label="Fale comigo no WhatsApp">
-    💬 Fale comigo no WhatsApp
-  </a>
-
-  <footer>
-    &copy; 2025 B. Souza Store Londrina<br />
-    Rua Castanheiras, 670 - Jd Leonor - Londrina/PR
-  </footer>
-
+    // Para transição automática após X segundos, descomente:
+    /*
+    setTimeout(function() {
+      document.getElementById('entrada').style.display = 'none';
+      document.getElementById('main-content').style.display = 'block';
+    }, 3500);
+    */
+  </script>
 </body>
 </html>
