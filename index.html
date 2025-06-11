@@ -6,192 +6,144 @@
   <meta name="google-site-verification" content="EKX-XDSIy42Cfe1eqTY-FF1EG79E0IZ9GmQkfhtGRGQ" />
   <title>B. Souza Store Londrina</title>
 
-  <!-- Fonte Great Vibes para o título -->
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
+  <!-- Fontes elegantes -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
 
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #fef7f8, #f8ede3);
-      color: #4b3b2a;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
+      font-family: 'Lato', sans-serif;
+      background-color: #fefaf7;
+      color: #3e2f22;
     }
 
     header {
-      background: linear-gradient(90deg, #f9d3e3, #fce4ec);
-      color: #a67c52;
-      padding: 60px 20px 40px;
+      background: linear-gradient(135deg, #f5e7e0, #fff0f5);
       text-align: center;
-      border-bottom: 4px solid #d4af37;
-      box-shadow: 0 4px 12px rgba(212, 175, 55, 0.25);
+      padding: 60px 20px 40px;
+      border-bottom: 3px solid #d4af37;
     }
 
     header h1 {
-      font-family: 'Great Vibes', cursive;
-      font-size: 4.5rem;
-      margin-bottom: 0;
-      letter-spacing: 3px;
-      font-weight: 400;
-      text-shadow: 1px 1px 3px #d4af37;
+      font-family: 'Playfair Display', serif;
+      font-size: 3.8rem;
+      margin: 0;
+      color: #a67c52;
+      letter-spacing: 2px;
     }
 
     .descricao {
-      max-width: 900px;
-      margin: 30px auto 15px;
-      padding: 20px 30px;
-      font-size: 1.15rem;
-      line-height: 1.7;
-      color: #4b3b2a;
-      background-color: #fff4f8;
+      max-width: 880px;
+      margin: 40px auto;
+      background-color: #fff;
+      padding: 30px 25px;
       border-left: 6px solid #d4af37;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(212, 175, 55, 0.1);
-      font-weight: 600;
+      border-radius: 14px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      font-size: 1.1rem;
+      line-height: 1.7;
     }
 
     .catalogo {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-      padding: 40px 25px 80px;
-      max-width: 1120px;
+      gap: 35px;
+      padding: 40px 30px;
+      max-width: 1200px;
       margin: auto;
-      flex-grow: 1;
     }
 
     .produto {
-      position: relative;
-      background-color: #fff;
+      background-color: #ffffff;
       border-radius: 18px;
-      box-shadow: 0 8px 20px rgba(212, 175, 55, 0.15);
-      padding: 30px 20px 40px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+      padding: 20px;
       text-align: center;
-      border: 2.5px solid #f5e1dc;
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
-      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
     }
 
     .produto:hover {
       transform: translateY(-8px);
-      box-shadow: 0 12px 28px rgba(212, 175, 55, 0.35);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
     }
 
     .produto img {
-      width: 100%;
-      max-height: 320px;
+      max-width: 100%;
+      max-height: 260px;
       object-fit: contain;
-      border-radius: 16px;
-      margin-bottom: 18px;
-      filter: drop-shadow(0 2px 4px rgba(212, 175, 55, 0.25));
-      transition: filter 0.3s ease;
-    }
-
-    .produto:hover img {
-      filter: drop-shadow(0 6px 8px rgba(212, 175, 55, 0.5));
+      border-radius: 12px;
+      margin-bottom: 15px;
     }
 
     .produto h2 {
-      font-size: 1.5rem;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      margin: 12px 0;
       color: #a67c52;
-      margin: 14px 0 8px;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-      text-shadow: 0 0 3px #d4af37aa;
     }
 
     .produto p {
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: #4b3b2a;
-      letter-spacing: 0.5px;
+      font-size: 1.1rem;
+      font-weight: bold;
     }
 
     .promocao {
       position: absolute;
-      top: 0;
-      left: 0;
-      background: linear-gradient(90deg, #d4af37, #fceabb);
-      color: #4b3b2a;
-      font-weight: 700;
-      padding: 10px 18px;
-      border-top-left-radius: 18px;
-      border-bottom-right-radius: 18px;
-      font-size: 1rem;
-      box-shadow: 2px 3px 7px rgba(0,0,0,0.25);
-      user-select: none;
+      top: 15px;
+      left: 15px;
+      background: #d4af37;
+      color: #fff;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
     }
 
     .aviso {
-      max-width: 900px;
-      margin: 20px auto 45px;
-      padding: 20px 30px;
-      background: linear-gradient(90deg, #f9d3e3, #fce4ec);
+      max-width: 880px;
+      margin: 30px auto;
+      padding: 20px;
+      background: #fff9f2;
+      border-left: 6px solid #d4af37;
       border-radius: 14px;
-      border: 2px solid #d4af37;
-      color: #a67c52;
-      font-size: 1.25rem;
       text-align: center;
-      font-family: 'Segoe UI', Tahoma, sans-serif;
+      font-size: 1.1rem;
       font-style: italic;
-      box-shadow: 0 3px 10px rgba(212, 175, 55, 0.15);
-      font-weight: 600;
     }
 
     .aviso a {
       color: #25D366;
       text-decoration: none;
-      font-weight: 700;
-      transition: color 0.3s ease;
+      font-weight: bold;
     }
 
-    .aviso a:hover {
-      color: #1ebe5c;
-      text-decoration: underline;
-    }
-
-    .whatsapp {
+    .whatsapp-fixo {
       position: fixed;
-      bottom: 30px;
-      right: 30px;
-      padding: 18px 36px;
-      background-color: #25D366;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
       color: white;
-      font-size: 1.3rem;
-      font-weight: 700;
-      border: none;
-      border-radius: 60px;
+      padding: 16px 22px;
+      border-radius: 50px;
       text-decoration: none;
-      box-shadow: 0 6px 14px rgba(37, 211, 102, 0.6);
-      transition: background-color 0.3s ease, box-shadow 0.3s ease;
-      z-index: 100;
-      display: flex;
-      align-items: center;
-      gap: 10px;
+      font-size: 1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: background 0.3s;
+      z-index: 999;
     }
 
-    .whatsapp:hover {
-      background-color: #1ebe5c;
-      box-shadow: 0 8px 18px rgba(29, 173, 82, 0.8);
-    }
-
-    .whatsapp svg {
-      width: 22px;
-      height: 22px;
-      fill: white;
+    .whatsapp-fixo:hover {
+      background: #1ebe5c;
     }
 
     footer {
       text-align: center;
-      padding: 25px 20px;
-      font-size: 0.9rem;
+      padding: 25px 15px;
+      background-color: #fdf6f0;
       color: #7b6a58;
-      border-top: 1px solid #e8d4c8;
-      background-color: #fff7f7;
-      font-weight: 600;
-      user-select: none;
+      font-size: 0.9rem;
+      margin-top: 40px;
     }
   </style>
 </head>
@@ -201,76 +153,46 @@
     <h1>B. Souza Store Londrina</h1>
   </header>
 
-  <div class="descricao" role="region" aria-label="Descrição da loja">
+  <div class="descricao">
     <strong>Revendedora oficial O Boticário, Eudora e Natura.</strong><br />
-    Aqui você encontra <strong>perfumes, hidratantes femininos e masculinos, sabonetes, shower gels, cremes para as mãos, shampoos, condicionadores, cestas e kits para presente</strong>, tudo com <strong>descontos especiais</strong>.<br /><br />
+    Perfumes, hidratantes, sabonetes, shower gels, shampoos, kits e presentes. Tudo com <strong>descontos especiais</strong> e atendimento VIP.<br /><br />
     ✅ Produtos 100% originais<br />
-    ✅ Parcelamento no cartão sem juros<br />
-    ✅ Aceitamos Pix<br />
-    ✅ Atendimento rápido e 100% pelo WhatsApp<br />
-    ✅ Disponível 24 horas
+    ✅ Parcelamento sem juros<br />
+    ✅ Pix ou cartão<br />
+    ✅ Entrega rápida e atendimento pelo WhatsApp
   </div>
 
-  <section class="catalogo" aria-label="Catálogo de produtos">
+  <section class="catalogo">
+    <!-- Produtos aqui -->
     <div class="produto">
       <img src="https://i.ibb.co/CKy1gN2j/92730-a-1000x1000-1.jpg" alt="Hidratante Lyra">
       <h2>Hidratante Lyra</h2>
       <p>R$ 39,90</p>
     </div>
-
     <div class="produto">
-      <img src="https://i.ibb.co/4wQt2bh3/IMENSI-ALIVE-LOC-HID-CPO-200ml-E94096.jpg" alt="Hidratante Imensi Alive">
+      <img src="https://i.ibb.co/4wQt2bh3/IMENSI-ALIVE-LOC-HID-CPO-200ml-E94096.jpg" alt="Imensi Alive">
       <h2>Hidratante Imensi Alive</h2>
       <p>R$ 39,90</p>
     </div>
-
     <div class="produto">
-      <img src="https://i.ibb.co/5gmhQMwn/3cb047fa-b549-4289-a2e3-3a93eec62803-e84667-estj-club-6-voyage-nam-25-1.jpg" alt="Kit Presente Club 6 Voyage">
-      <h2>Kit Presente Club 6 Voyage</h2>
-      <p>R$ 144,90</p>
-    </div>
-
-    <div class="produto">
-      <div class="promocao" aria-label="Promoção exclusiva">🌟 PROMOÇÃO EXCLUSIVA</div>
-      <img src="https://i.ibb.co/gMkgq7TF/E2022111615-Imensi-Col-Loc-Hid-3.jpg" alt="Combo Imensi Alive">
-      <h2>Combo Imensi Alive</h2>
-      <p>R$ 169,90</p>
-    </div>
-
-    <div class="produto">
-      <img src="https://i.ibb.co/PsX5JSXb/Floratta-Red-Desodorante-Colonia-B75792-2.jpg" alt="Floratta Red 75ml">
-      <h2>Floratta Red 75ml</h2>
-      <p>R$ 125,90</p>
-    </div>
-
-    <div class="produto">
-      <img src="https://i.ibb.co/nxHyMvf/11b294f1-a277-448d-abec-47a3e54d2809-e52748-la-victorie-intense-creme-hid-desod-corporal-acetinado-2.jpg" alt="Creme Acetinado La Victorie Intense">
-      <h2>Creme Acetinado La Victorie Intense</h2>
-      <p>R$ 99,90</p>
-    </div>
-
-    <div class="produto">
-      <div class="promocao" aria-label="Promoção exclusiva">🌟 PROMOÇÃO EXCLUSIVA</div>
-      <img src="https://i.ibb.co/DfQjfnwj/IMG-20250610-225959.png" alt="Kit Deleite Vaquinha">
+      <div class="promocao">🌟 PROMOÇÃO</div>
+      <img src="https://i.ibb.co/DfQjfnwj/IMG-20250610-225959.png" alt="Kit Vaquinha">
       <h2>Kit Deleite "Vaquinha"</h2>
       <p>R$ 156,90</p>
     </div>
   </section>
 
   <div class="aviso">
-    Em breve, um catálogo completo com todas as novidades!<br />
-    Mas se você já quiser garantir o seu produto com desconto, é só chamar no
-    <a href="https://wa.me/5543984369699" target="_blank" rel="noopener noreferrer">WhatsApp</a>!
+    Catálogo completo em breve. Mas se quiser garantir seu produto agora, <a href="https://wa.me/5543984369699" target="_blank">clique aqui</a> 💬
   </div>
 
-  <a class="whatsapp" href="https://wa.me/5543984369699" target="_blank" rel="noopener noreferrer" aria-label="Fale comigo no WhatsApp">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.52 3.48a11.91 11.91 0 00-16.85 0 11.84 11.84 0 00-3.55 8.41 11.95 11.95 0 0012.88 12.11 11.85 11.85 0 008.42-3.54 11.9 11.9 0 000-16.98zm-6.3 14.8c-1.55 0-2.45-.7-3.63-1.54l-.26-.16a1.07 1.07 0 01-1.12 0 11.46 11.46 0 01-3.34-3.5 1.05 1.05 0 01.22-1.55l1.46-1.2a1.1 1.1 0 011.52.11l.33.4a1.12 1.12 0 001.37.3l2.48-1.1a1.1 1.1 0 00.46-1.57l-1.03-1.58a1.08 1.08 0 011.4-1.48 9.3 9.3 0 013.2 3.38 9.14 9.14 0 01-2.22 8.1 1.09 1.09 0 01-.65.26z"/></svg>
+  <a class="whatsapp-fixo" href="https://wa.me/5543984369699" target="_blank">
     💬 Fale comigo no WhatsApp
   </a>
 
   <footer>
-    &copy; 2025 B. Souza Store Londrina - Todos os direitos reservados.<br />
-    Rua Castanheiras, 670 - Jd Leonor - Londrina - PR
+    &copy; 2025 B. Souza Store Londrina<br />
+    Rua Castanheiras, 670 - Jd Leonor - Londrina/PR
   </footer>
 
 </body>
