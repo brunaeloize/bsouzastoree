@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="google-site-verification" content="EKX-XDSIy42Cfe1eqTY-FF1EG79E0IZ9GmQkfhtGRGQ" />
   <title>B. Souza Store Londrina</title>
   <style>
@@ -28,34 +28,31 @@
     }
     .whatsapp-link {
       position: absolute;
+      top: 58.5%; /* Ajuste fino para alinhar com a palavra WHATSAPP */
       left: 50%;
-      top: 32.5%; /* Alinhar exatamente sobre a palavra "WHATSAPP" da imagem */
       transform: translate(-50%, -50%);
-      width: 180px;  /* Ajuste fino baseado no tamanho da palavra na imagem */
-      height: 44px;
-      z-index: 2;
+      width: 160px; /* Largura proporcional à palavra */
+      height: 40px;
       background: transparent;
       border: none;
+      z-index: 10;
       cursor: pointer;
-      text-indent: -9999px; /* Esconde o texto do link */
+      text-indent: -9999px;
     }
 
     @media (max-width: 500px) {
-      .img-container {
-        max-width: 98vw;
-      }
       .whatsapp-link {
-        width: 120px;
-        height: 32px;
-        top: 32.5%;
+        top: 58.5%;
+        width: 130px;
+        height: 36px;
       }
     }
   </style>
 </head>
 <body>
   <div class="img-container">
-    <img class="main-img" src="https://pplx-res.cloudinary.com/image/upload/v1749634722/user_uploads/75125752/d7ebe0d8-186a-4503-9380-51d6a92600cb/1000407067.jpg" alt="B. Souza Store - Página Inicial">
-    <a class="whatsapp-link" href="https://wa.me/5543984369699" target="_blank" title="Fale conosco no WhatsApp">WHATSAPP</a>
+    <img class="main-img" src="https://pplx-res.cloudinary.com/image/upload/v1749634722/user_uploads/75125752/d7ebe0d8-186a-4503-9380-51d6a92600cb/1000407067.jpg" alt="B. Souza Store - Página Inicial" />
+    <a class="whatsapp-link" href="https://wa.me/5543984369699" target="_blank" title="Fale conosco no WhatsApp">Fale no WhatsApp</a>
   </div>
 </body>
 </html>
