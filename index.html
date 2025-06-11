@@ -6,111 +6,66 @@
   <!-- Verificação Google -->
   <meta name="google-site-verification" content="EKX-XDSIy42Cfe1eqTY-FF1EG79E0IZ9GmQkfhtGRGQ" />
   <title>B. Souza Store Londrina</title>
-  <!-- Fonte similar à imagem -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       padding: 0;
+      background: #faede5;
       min-height: 100vh;
-      background: #fdefe4;
-      font-family: 'Montserrat', Arial, sans-serif;
       display: flex;
       align-items: center;
       justify-content: center;
     }
-    .container {
+    .img-container {
+      position: relative;
       width: 100%;
-      max-width: 420px;
-      margin: 0 auto;
-      text-align: center;
-      background: #fdefe4;
-      padding: 32px 16px 0 16px;
-      box-sizing: border-box;
+      max-width: 430px;
     }
-    .title {
-      font-family: 'Playfair Display', serif;
-      color: #6d5741;
-      font-size: 2.2rem;
-      letter-spacing: 0.07em;
-      font-weight: 700;
-      margin-bottom: 0.4em;
-      margin-top: 0.7em;
+    .main-img {
+      width: 100%;
+      display: block;
+      border-radius: 0 0 16px 16px;
+      box-shadow: 0 8px 32px #0001;
     }
-    .subtitle {
-      font-family: 'Montserrat', serif;
-      color: #8c7b6a;
-      font-size: 1.05rem;
-      letter-spacing: 0.30em;
-      font-weight: 500;
-      margin-bottom: 1.2em;
-      margin-top: 0.2em;
-    }
-    .desc {
-      color: #6d5741;
-      font-size: 1.01rem;
-      font-family: 'Montserrat', Arial, sans-serif;
-      margin-bottom: 2.2em;
-      letter-spacing: 0.01em;
-    }
-    .whatsapp-btn {
+    .whatsapp-link {
+      position: absolute;
+      left: 50%;
+      top: 34.7%;
+      transform: translate(-50%, -50%);
       display: inline-block;
-      padding: 0.6em 2.7em;
-      border: 1.2px solid #6d5741;
-      background: transparent;
-      color: #6d5741;
-      font-size: 1.04rem;
-      letter-spacing: 0.18em;
+      padding: 0.5em 2.5em;
+      border: 1.5px solid #6e5642;
+      color: #6e5642;
+      background: rgba(255,255,255,0.01);
       font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 1.05rem;
+      letter-spacing: 0.18em;
       border-radius: 2.5px;
       text-decoration: none;
-      margin-bottom: 2.7em;
-      transition: background 0.2s, color 0.2s;
-      outline: none;
-      cursor: pointer;
       font-weight: 500;
+      transition: background 0.2s, color 0.2s;
       box-sizing: border-box;
-      margin-top: 0.5em;
-      margin-bottom: 2.5em;
+      text-align: center;
     }
-    .whatsapp-btn:hover {
-      background: #6d5741;
+    .whatsapp-link:hover {
+      background: #6e5642;
       color: #fff;
     }
-    .produtos-img {
-      width: 100%;
-      max-width: 370px;
-      margin: 0 auto 0 auto;
-      display: block;
-      border-radius: 0 0 12px 12px;
-      box-shadow: 0 8px 32px #0001;
-      user-select: none;
-      pointer-events: none;
-    }
     @media (max-width: 500px) {
-      .container {
+      .img-container {
         max-width: 98vw;
-        padding: 14px 2vw 0 2vw;
       }
-      .title {
-        font-size: 1.3rem;
-      }
-      .subtitle {
-        font-size: 0.8rem;
-      }
-      .produtos-img {
-        max-width: 94vw;
+      .whatsapp-link {
+        font-size: 0.95rem;
+        padding: 0.45em 1.2em;
       }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="title">B. SOUZA STORE</div>
-    <div class="subtitle">LONDRINA</div>
-    <div class="desc">Revendedora O Boticário | Eudora | Natura</div>
-    <a class="whatsapp-btn" href="https://wa.me/5543984369699" target="_blank">WHATSAPP</a>
-    <img class="produtos-img" src="https://pplx-res.cloudinary.com/image/upload/v1749633575/user_uploads/75125752/9154bbe3-7ee7-4841-a310-06ae3ccd7ad6/1000407067.jpg" alt="Produtos O Boticário, Eudora, Natura">
+  <div class="img-container">
+    <img class="main-img" src="https://pplx-res.cloudinary.com/image/upload/v1749633575/user_uploads/75125752/9154bbe3-7ee7-4841-a310-06ae3ccd7ad6/1000407067.jpg" alt="B. Souza Store - Página Inicial">
+    <a class="whatsapp-link" href="https://wa.me/5543984369699" target="_blank" title="Fale conosco no WhatsApp">WHATSAPP</a>
   </div>
 </body>
 </html>
