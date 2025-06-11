@@ -22,6 +22,7 @@
       text-align: center;
       padding: 60px 20px 40px;
       border-bottom: 3px solid #d4af37;
+      position: relative;
     }
 
     header h1 {
@@ -30,6 +31,23 @@
       margin: 0;
       color: #a67c52;
       letter-spacing: 2px;
+    }
+
+    .instagram-icon {
+      position: absolute;
+      top: 25px;
+      right: 25px;
+    }
+
+    .instagram-icon img {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .instagram-icon img:hover {
+      transform: scale(1.1);
     }
 
     .descricao {
@@ -150,6 +168,9 @@
 <body>
 
   <header>
+    <a class="instagram-icon" href="https://www.instagram.com/bsouza_storee?igsh=MWdybmc5anU2d2Zkeg==" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+    </a>
     <h1>B. Souza Store Londrina</h1>
   </header>
 
@@ -162,7 +183,6 @@
   </div>
 
   <section class="catalogo">
-    <!-- Produtos aqui -->
     <div class="produto">
       <img src="https://i.ibb.co/CKy1gN2j/92730-a-1000x1000-1.jpg" alt="Hidratante Lyra">
       <h2>Hidratante Lyra</h2>
