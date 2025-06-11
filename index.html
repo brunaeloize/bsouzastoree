@@ -26,33 +26,28 @@
       border-radius: 0 0 16px 16px;
       box-shadow: 0 8px 32px #0001;
     }
-    .whatsapp-link {
+    .invisible-button {
       position: absolute;
-      top: 58.5%; /* Ajuste fino para alinhar com a palavra WHATSAPP */
+      top: 58.3%; /* ajuste fino para alinhar com "WHATSAPP" da imagem */
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 160px; /* Largura proporcional à palavra */
-      height: 40px;
-      background: transparent;
-      border: none;
+      width: 170px;  /* largura do botão invisível */
+      height: 45px;  /* altura do botão invisível */
       z-index: 10;
+      background-color: transparent;
+      border: none;
       cursor: pointer;
-      text-indent: -9999px;
-    }
-
-    @media (max-width: 500px) {
-      .whatsapp-link {
-        top: 58.5%;
-        width: 130px;
-        height: 36px;
-      }
     }
   </style>
 </head>
 <body>
   <div class="img-container">
     <img class="main-img" src="https://pplx-res.cloudinary.com/image/upload/v1749634722/user_uploads/75125752/d7ebe0d8-186a-4503-9380-51d6a92600cb/1000407067.jpg" alt="B. Souza Store - Página Inicial" />
-    <a class="whatsapp-link" href="https://wa.me/5543984369699" target="_blank" title="Fale conosco no WhatsApp">Fale no WhatsApp</a>
+
+    <!-- Link real envolvendo o botão invisível -->
+    <a href="https://wa.me/5543984369699" target="_blank" title="Fale conosco no WhatsApp">
+      <button class="invisible-button" aria-label="Fale conosco no WhatsApp"></button>
+    </a>
   </div>
 </body>
 </html>
