@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="google-site-verification" content="EKX-XDSIy42Cfe1eqTY-FF1EG79E0IZ9GmQkfhtGRGQ" />
   <title>B. Souza Store Londrina</title>
   <style>
     body {
@@ -20,56 +19,51 @@
       position: relative;
       width: 100%;
       max-width: 430px;
+      height: 680px; /* altura real da imagem */
+      background-image: url('https://pplx-res.cloudinary.com/image/upload/v1749634722/user_uploads/75125752/d7ebe0d8-186a-4503-9380-51d6a92600cb/1000407067.jpg');
+      background-size: cover;
+      background-position: center;
       border-radius: 0 0 16px 16px;
-      overflow: hidden;
       box-shadow: 0 8px 32px #0001;
+      overflow: hidden;
     }
 
-    .main-img {
-      width: 100%;
-      display: block;
-    }
-
-    .whatsapp-area {
+    .whatsapp-button {
       position: absolute;
-      top: 58.3%; /* ALINHAMENTO com o botão da imagem */
+      top: 58.3%; /* ajuste exato para o texto WHATSAPP da imagem */
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 170px; /* LARGURA invisível do botão */
-      height: 45px;  /* ALTURA invisível do botão */
-      z-index: 10;
+      width: 170px;
+      height: 45px;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      z-index: 2;
     }
 
-    .whatsapp-area a {
+    .whatsapp-button a {
       display: block;
       width: 100%;
       height: 100%;
       text-indent: -9999px;
-      background-color: transparent;
-      border: none;
-      cursor: pointer;
     }
 
     @media (max-width: 500px) {
-      .whatsapp-area {
-        width: 120px;
-        height: 36px;
+      .img-container {
+        height: 95vw;
+      }
+      .whatsapp-button {
         top: 58.3%;
+        width: 130px;
+        height: 36px;
       }
     }
   </style>
 </head>
 <body>
   <div class="img-container">
-    <img
-      class="main-img"
-      src="https://pplx-res.cloudinary.com/image/upload/v1749634722/user_uploads/75125752/d7ebe0d8-186a-4503-9380-51d6a92600cb/1000407067.jpg"
-      alt="B. Souza Store - Página Inicial"
-    />
-
-    <!-- Botão invisível clicável -->
-    <div class="whatsapp-area">
-      <a href="https://wa.me/5543984369699" target="_blank" title="Fale conosco no WhatsApp">WHATSAPP</a>
+    <div class="whatsapp-button">
+      <a href="https://wa.me/5543984369699" target="_blank" title="Fale conosco no WhatsApp">WhatsApp</a>
     </div>
   </div>
 </body>
