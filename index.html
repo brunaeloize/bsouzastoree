@@ -15,39 +15,62 @@
       align-items: center;
       justify-content: center;
     }
+
     .img-container {
       position: relative;
       width: 100%;
       max-width: 430px;
+      border-radius: 0 0 16px 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 32px #0001;
     }
+
     .main-img {
       width: 100%;
       display: block;
-      border-radius: 0 0 16px 16px;
-      box-shadow: 0 8px 32px #0001;
     }
-    .invisible-button {
+
+    .whatsapp-area {
       position: absolute;
-      top: 58.3%; /* ajuste fino para alinhar com "WHATSAPP" da imagem */
+      top: 58.3%; /* ALINHAMENTO com o botão da imagem */
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 170px;  /* largura do botão invisível */
-      height: 45px;  /* altura do botão invisível */
+      width: 170px; /* LARGURA invisível do botão */
+      height: 45px;  /* ALTURA invisível do botão */
       z-index: 10;
+    }
+
+    .whatsapp-area a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      text-indent: -9999px;
       background-color: transparent;
       border: none;
       cursor: pointer;
+    }
+
+    @media (max-width: 500px) {
+      .whatsapp-area {
+        width: 120px;
+        height: 36px;
+        top: 58.3%;
+      }
     }
   </style>
 </head>
 <body>
   <div class="img-container">
-    <img class="main-img" src="https://pplx-res.cloudinary.com/image/upload/v1749634722/user_uploads/75125752/d7ebe0d8-186a-4503-9380-51d6a92600cb/1000407067.jpg" alt="B. Souza Store - Página Inicial" />
+    <img
+      class="main-img"
+      src="https://pplx-res.cloudinary.com/image/upload/v1749634722/user_uploads/75125752/d7ebe0d8-186a-4503-9380-51d6a92600cb/1000407067.jpg"
+      alt="B. Souza Store - Página Inicial"
+    />
 
-    <!-- Link real envolvendo o botão invisível -->
-    <a href="https://wa.me/5543984369699" target="_blank" title="Fale conosco no WhatsApp">
-      <button class="invisible-button" aria-label="Fale conosco no WhatsApp"></button>
-    </a>
+    <!-- Botão invisível clicável -->
+    <div class="whatsapp-area">
+      <a href="https://wa.me/5543984369699" target="_blank" title="Fale conosco no WhatsApp">WHATSAPP</a>
+    </div>
   </div>
 </body>
 </html>
