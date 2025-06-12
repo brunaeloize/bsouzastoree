@@ -13,16 +13,27 @@
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: flex-start;
       font-family: 'Segoe UI', sans-serif;
+    }
+
+    /* Barra superior com aviso e endereço */
+    .top-info {
+      background: #f9e6eb; /* rosa bebê suave */
+      color: #5c3d2e; /* marrom sofisticado */
+      text-align: center;
+      padding: 14px 12px;
+      font-size: 1rem;
+      font-weight: 500;
+      border-bottom: 1px solid #eccfd9;
+      line-height: 1.5;
     }
 
     .img-container {
       position: relative;
       width: 100%;
       max-width: 430px;
-      margin: 0 auto;
-      margin-top: 40px;
+      margin: 20px auto 0 auto;
     }
 
     .main-img {
@@ -31,20 +42,6 @@
       display: block;
       border-radius: 0 0 16px 16px;
       box-shadow: 0 8px 32px #0001;
-    }
-
-    /* Nova classe para o aviso */
-    .notice {
-      max-width: 430px;
-      margin: 20px auto 0 auto;
-      padding: 12px 16px;
-      background-color: #fce9f1; /* tom rosa suave do footer */
-      color: #6b4f3b; /* marrom elegante */
-      font-family: 'Segoe UI', sans-serif;
-      font-size: 1rem;
-      border-radius: 12px;
-      text-align: center;
-      box-shadow: 0 2px 8px rgba(107, 79, 59, 0.2);
     }
 
     .whatsapp-link {
@@ -65,15 +62,6 @@
       width: 100%;
       height: 100%;
       text-indent: -9999px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px 10px;
-      background: #fce9f1;
-      color: #4a4a4a;
-      font-size: 0.95rem;
-      border-top: 1px solid #eacfd9;
     }
 
     /* Botão flutuante */
@@ -124,20 +112,21 @@
   </style>
 </head>
 <body>
+  <!-- Topo com aviso e endereço -->
+  <div class="top-info">
+    <p>No momento não estamos realizando entregas.<br>Retirada 24h na Rua Castanheiras 670 - Jardim Leonor, Londrina - PR, CEP 86071-140</p>
+  </div>
+
+  <!-- Container da imagem principal -->
   <div class="img-container">
     <img
       class="main-img"
       src="https://pplx-res.cloudinary.com/image/upload/v1749634722/user_uploads/75125752/d7ebe0d8-186a-4503-9380-51d6a92600cb/1000407067.jpg"
       alt="B. Souza Store - Página Inicial"
     />
-  </div>
-
-  <div class="notice">
-    No momento, não estamos realizando entregas. Retirada disponível 24 horas.
-  </div>
-
-  <div class="whatsapp-link">
-    <a href="https://wa.me/5543984369699" target="_blank" title="Fale conosco no WhatsApp">WhatsApp</a>
+    <div class="whatsapp-link">
+      <a href="https://wa.me/5543984369699" target="_blank" title="Fale conosco no WhatsApp">WhatsApp</a>
+    </div>
   </div>
 
   <!-- Botão flutuante WhatsApp -->
@@ -146,10 +135,5 @@
       <path d="M16.002 3C9.373 3 4 8.373 4 15.002c0 2.649.83 5.093 2.25 7.113L4 29l7.163-2.222A12.947 12.947 0 0 0 16.002 27c6.629 0 12.002-5.373 12.002-11.998C28.004 8.373 22.63 3 16.002 3zm0 2c5.536 0 10.002 4.466 10.002 10.002 0 5.536-4.466 10.002-10.002 10.002a10.95 10.95 0 0 1-5.84-1.65l-.417-.263-4.22 1.308 1.308-4.22-.263-.417a10.95 10.95 0 0 1-1.65-5.84C5.999 9.466 10.465 5 16.002 5zm-3.43 5.625c-.255 0-.551.014-.843.42-.29.405-1.105 1.087-1.105 2.635s1.135 3.06 1.294 3.27c.16.21 2.215 3.45 5.57 4.74 2.76 1.06 3.31.85 3.91.795.6-.056 1.93-.785 2.205-1.545.275-.76.275-1.41.2-1.545-.075-.135-.295-.215-.615-.375-.32-.16-1.9-.935-2.195-1.045-.295-.11-.51-.17-.73.17-.22.34-.845 1.045-1.035 1.26-.19.215-.38.24-.695.08-.315-.16-1.33-.49-2.53-1.56-1.08-.955-1.81-2.13-2.02-2.485-.21-.355-.023-.55.15-.73.15-.15.34-.38.505-.57.165-.19.22-.32.33-.535.11-.215.055-.405-.025-.57-.08-.165-.74-1.765-1.015-2.41-.25-.59-.51-.62-.77-.63z"/>
     </svg>
   </a>
-
-  <footer>
-    Retirada: Rua Castanheiras 670 - Jardim Leonor<br>
-    Londrina - PR, CEP 86071-140
-  </footer>
 </body>
 </html>
