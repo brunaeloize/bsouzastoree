@@ -3,203 +3,229 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="google-site-verification" content="EKX-XDSIy42Cfe1eqTY-FF1EG79E0IZ9GmQkfhtGRGQ" />
-  <title>B. Souza Store Londrina</title>
+  <title>B. Souza Store - Luxo e Sofisticação</title>
   <style>
-    body {
+    /* Reset básico */
+    * {
       margin: 0;
       padding: 0;
-      background: #f1ede7; /* fundo idêntico ao da imagem */
+      box-sizing: border-box;
+    }
+    body {
+      background: #f9f4f2; /* tom creme claro */
+      font-family: 'Cormorant Garamond', serif;
+      color: #3e2f1c; /* marrom escuro elegante */
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: #4a4a4a;
+      align-items: center;
+      padding: 40px 20px 80px;
     }
 
-    .top-info {
-      background: #f1ede7;
-      color: #3e3e3e;
+    header {
+      max-width: 960px;
+      width: 100%;
       text-align: center;
-      padding: 14px 12px;
-      font-size: 1rem;
-      font-weight: 500;
-      border-bottom: 1px solid #c4c4c4;
-      line-height: 1.5;
+      margin-bottom: 50px;
     }
 
-    .top-info strong {
+    header h1 {
+      font-family: 'Cormorant Garamond', serif;
       font-weight: 700;
-      color: #2b2b2b;
+      font-size: 3.6rem;
+      color: #bfa26f; /* dourado suave */
+      letter-spacing: 6px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      text-shadow: 0 0 12px #bfa26f66;
     }
 
-    .img-container {
-      position: relative;
-      width: 100%;
-      max-width: 430px;
-      margin: 20px auto 0 auto;
-    }
-
-    .main-img {
-      width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 0 0 16px 16px;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    }
-
-    .below-image-text {
-      max-width: 430px;
-      margin: 16px auto 24px auto;
+    header p {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
       font-size: 1.2rem;
-      font-weight: 600;
-      color: #5a5a5a;
-      text-align: center;
-      font-family: 'Segoe UI Semibold', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      letter-spacing: 0.03em;
+      color: #6a5a3a;
+      letter-spacing: 1.5px;
+      margin-bottom: 6px;
     }
 
-    .catalogo {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      padding: 20px;
-      max-width: 500px;
-      margin: 0 auto;
+    header p.location {
+      font-size: 1rem;
+      color: #a3946a;
+      font-style: italic;
+      margin-top: 8px;
+    }
+
+    main {
+      max-width: 960px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 36px;
     }
 
     .produto {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      padding: 16px;
-      text-align: center;
+      background: #fff;
+      border-radius: 24px;
+      box-shadow: 0 8px 24px rgba(191, 162, 111, 0.15);
+      overflow: hidden;
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .produto:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 14px 38px rgba(191, 162, 111, 0.35);
     }
 
     .produto img {
-      max-width: 100%;
-      border-radius: 8px;
-      height: auto;
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      border-bottom: 2px solid #bfa26f;
+      transition: transform 0.35s ease;
+      border-top-left-radius: 24px;
+      border-top-right-radius: 24px;
+    }
+    .produto:hover img {
+      transform: scale(1.07);
     }
 
-    .produto h2 {
-      font-size: 1.1rem;
-      margin: 12px 0 6px;
-      color: #3a3a3a;
+    .produto-info {
+      padding: 28px 24px;
+      text-align: center;
     }
 
-    .produto p {
-      font-size: 1rem;
-      color: #6a4f3b;
-      font-weight: bold;
+    .produto-info h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 700;
+      font-size: 1.8rem;
+      color: #bfa26f;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
     }
 
-    .promocao {
-      background-color: #ffdd99;
-      color: #6a4f3b;
-      font-weight: bold;
-      font-size: 0.9rem;
-      padding: 4px 8px;
-      margin-bottom: 8px;
+    .produto-info p {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 1.3rem;
+      color: #5a4d32;
+    }
+
+    .promo {
       display: inline-block;
-      border-radius: 6px;
+      background-color: #bfa26f;
+      color: #f9f4f2;
+      font-weight: 700;
+      padding: 8px 22px;
+      font-size: 1rem;
+      border-radius: 50px;
+      margin-bottom: 20px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      box-shadow: 0 0 10px #bfa26fcc;
     }
 
+    footer {
+      margin-top: 70px;
+      max-width: 960px;
+      width: 100%;
+      text-align: center;
+      color: #a3946a;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.95rem;
+      letter-spacing: 1px;
+    }
+
+    /* Botão WhatsApp flutuante */
     .floating-whatsapp {
       position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25D366; /* cor original do WhatsApp */
-      color: white;
+      bottom: 30px;
+      right: 30px;
+      background-color: #bfa26f;
       border-radius: 50%;
-      width: 55px;
-      height: 55px;
+      width: 65px;
+      height: 65px;
+      box-shadow: 0 6px 16px rgba(191, 162, 111, 0.5);
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
       text-decoration: none;
+      transition: background-color 0.3s ease;
       z-index: 1000;
-      transition: background 0.3s ease;
     }
-
     .floating-whatsapp:hover {
-      background-color: #1ebe5d;
+      background-color: #a68f4f;
     }
-
     .floating-whatsapp svg {
-      width: 28px;
-      height: 28px;
+      width: 32px;
+      height: 32px;
+      fill: white;
     }
 
-    @media (max-width: 500px) {
-      .floating-whatsapp {
-        width: 48px;
-        height: 48px;
-      }
-
-      .floating-whatsapp svg {
-        width: 24px;
-        height: 24px;
-      }
-    }
+    /* Fonts import */
   </style>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Montserrat:wght@500;600&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <div class="top-info">
-    <p><strong>Retirada 24h</strong> na Rua Castanheiras 670 - Jardim Leonor, Londrina - PR, CEP 86071-140</p>
-  </div>
+  <header>
+    <h1>B. Souza Store Londrina</h1>
+    <p>Revendedora O Boticário | Eudora | Natura</p>
+    <p class="location">Retirada 24h: Rua Castanheiras 670 - Jardim Leonor, Londrina - PR</p>
+  </header>
 
-  <div class="img-container">
-    <img
-      class="main-img"
-      src="https://pplx-res.cloudinary.com/image/upload/v1749634722/user_uploads/75125752/d7ebe0d8-186a-4503-9380-51d6a92600cb/1000407067.jpg"
-      alt="B. Souza Store - Página Inicial"
-    />
-  </div>
+  <main>
+    <article class="produto">
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Hidratante Lyra" />
+      <div class="produto-info">
+        <h2>Hidratante Lyra</h2>
+        <p>R$ 39,90</p>
+      </div>
+    </article>
 
-  <div class="below-image-text">
-    Pronta Entrega
-  </div>
+    <article class="produto">
+      <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=800&q=80" alt="Hidratante Imensi Alive" />
+      <div class="produto-info">
+        <h2>Hidratante Imensi Alive</h2>
+        <p>R$ 39,90</p>
+      </div>
+    </article>
 
-  <!-- Catálogo de produtos -->
-  <section class="catalogo">
-    <div class="produto">
-      <img src="https://i.ibb.co/CKy1gN2j/92730-a-1000x1000-1.jpg" alt="Hidratante Lyra">
-      <h2>Hidratante Lyra</h2>
-      <p>R$ 39,90</p>
-    </div>
+    <article class="produto">
+      <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=800&q=80" alt="Kit Presente Club 6 Voyage" />
+      <div class="produto-info">
+        <h2>Kit Presente Club 6 Voyage</h2>
+        <p>R$ 144,90</p>
+      </div>
+    </article>
 
-    <div class="produto">
-      <img src="https://i.ibb.co/4wQt2bh3/IMENSI-ALIVE-LOC-HID-CPO-200ml-E94096.jpg" alt="Hidratante Imensi Alive">
-      <h2>Hidratante Imensi Alive</h2>
-      <p>R$ 39,90</p>
-    </div>
+    <article class="produto">
+      <div style="text-align:center;">
+        <span class="promo">Promoção</span>
+      </div>
+      <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80" alt="Combo Imensi Alive" />
+      <div class="produto-info">
+        <h2>Combo Imensi Alive</h2>
+        <p>R$ 169,90</p>
+      </div>
+    </article>
+  </main>
 
-    <div class="produto">
-      <img src="https://i.ibb.co/5gmhQMwn/3cb047fa-b549-4289-a2e3-3a93eec62803-e84667-estj-club-6-voyage-nam-25-1.jpg" alt="Kit Presente Club 6 Voyage">
-      <h2>Kit Presente Club 6 Voyage</h2>
-      <p>R$ 144,90</p>
-    </div>
+  <footer>
+    <p>&copy; 2025 B. Souza Store | Todos os direitos reservados.</p>
+  </footer>
 
-    <div class="produto">
-      <div class="promocao">🌟 PROMOÇÃO EXCLUSIVA</div>
-      <img src="https://i.ibb.co/gMkgq7TF/E2022111615-Imensi-Col-Loc-Hid-3.jpg" alt="Combo Imensi Alive">
-      <h2>Combo Imensi Alive</h2>
-      <p>R$ 169,90</p>
-    </div>
-  </section>
-
-  <!-- Botão flutuante WhatsApp -->
   <a
-    class="floating-whatsapp"
     href="https://wa.me/5543984369699"
     target="_blank"
+    class="floating-whatsapp"
     title="Chamar no WhatsApp"
     aria-label="Chamar no WhatsApp"
   >
-    <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true" focusable="false">
+    <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false" >
       <path d="M16.002 3C9.373 3 4 8.373 4 15.002c0 2.649.83 5.093 2.25 7.113L4 29l7.163-2.222A12.947 12.947 0 0 0 16.002 27c6.629 0 12.002-5.373 12.002-11.998C28.004 8.373 22.63 3 16.002 3zm0 2c5.536 0 10.002 4.466 10.002 10.002 0 5.536-4.466 10.002-10.002 10.002a10.95 10.95 0 0 1-5.84-1.65l-.417-.263-4.22 1.308 1.308-4.22-.263-.417a10.95 10.95 0 0 1-1.65-5.84C5.999 9.466 10.465 5 16.002 5zm-3.43 5.625c-.255 0-.551.014-.843.42-.29.405-1.105 1.087-1.105 2.635s1.135 3.06 1.294 3.27c.16.21 2.215 3.45 5.57 4.74 2.76 1.06 3.31.85 3.91.795.6-.056 1.93-.785 2.205-1.545.275-.76.275-1.41.2-1.545-.075-.135-.295-.215-.615-.375-.32-.16-1.9-.935-2.195-1.045-.295-.11-.51-.17-.73.17-.22.34-.845 1.045-1.035 1.26-.19.215-.38.24-.695.08-.315-.16-1.33-.49-2.53-1.56-1.08-.955-1.81-2.13-2.02-2.485-.21-.355-.023-.55.15-.73.15-.15.34-.38.505-.57.165-.19.22-.32.33-.535.11-.215.055-.405-.025-.57-.08-.165-.74-1.765-1.015-2.41-.25-.59-.51-.62-.77-.63z"/>
     </svg>
   </a>
